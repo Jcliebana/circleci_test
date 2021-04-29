@@ -34,7 +34,6 @@ jobs:
       - run:
           name: Commit to GitHub
           command: |
-            CIRCLE_BRANCH
             if [[ "${CIRCLE_BRANCH}" = "dev" ]]
             then
               git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
