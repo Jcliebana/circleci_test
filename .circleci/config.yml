@@ -11,9 +11,6 @@ jobs:
     steps:
       # Step 1: obtain repo from GitHub
       - checkout
-      #- add_ssh_keys:
-      #    fingerprints:
-      #      - "64:e4:f4:1f:84:33:ff:47:1b:30:79:66:ce:b6:8b:a9"
       # Step 2: create virtual env and install dependencies
       - run:
           name: obtain repo from GitHub
