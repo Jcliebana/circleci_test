@@ -1,9 +1,8 @@
 """
 Unit tests for the utils library
 """
-import os
-import sys
-import inspect
+
+
 import utils
 
 
