@@ -12,7 +12,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "1b:b4:51:e2:4b:0a:3e:03:f1:58:a9:71:e8:87:3d:a9"
+            - "64:e4:f4:1f:84:33:ff:47:1b:30:79:66:ce:b6:8b:a9"
       # Step 2: create virtual env and install dependencies
       - run:
           name: obtain repo from GitHub
