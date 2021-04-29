@@ -40,10 +40,9 @@ jobs:
               echo ${CIRCLE_BRANCH}
               git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
-              git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
               git checkout main
               git merge dev
-              git commit -m "CircleCI merge"
+              git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
               git push --set-upstream origin main
             else
               echo "No es la rama dev por lo que no hay nada que subir a git"
