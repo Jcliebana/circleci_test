@@ -34,14 +34,11 @@ jobs:
       - run:
           name: Commit to GitHub
           command: |
-            git checkout master
-            git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
-            git push origin master
-workflows:
-  build-and-test:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only:
-                - dev
+            CIRCLE_BRANCH
+            if [[ "${CIRCLE_BRANCH}" = "dev" ]]
+            then
+              git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
+              git push origin main
+            else
+              echo "No es la rama dev por lo que no hay nada que subir a git"
+            fi
