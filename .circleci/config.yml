@@ -39,7 +39,7 @@ jobs:
           command: |
             if [[ "${CIRCLE_BRANCH}" = "dev" ]]
             then
-              git config --global user.email "Job@CircleCI"
+              git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
               git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
               git push origin main
