@@ -43,6 +43,7 @@ jobs:
               git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
               git checkout main
               git merge dev
+              git commit -m "CircleCI merge"
               git push --set-upstream origin main
             else
               echo "No es la rama dev por lo que no hay nada que subir a git"
