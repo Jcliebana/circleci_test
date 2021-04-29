@@ -37,11 +37,3 @@ jobs:
             git checkout master
             git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
             git push origin master
-workflows:
-  build-and-test:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only:
-                - dev
