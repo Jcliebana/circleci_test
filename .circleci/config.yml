@@ -11,12 +11,12 @@ jobs:
       # Step 1: obtain repo from GitHub
       - checkout
       # Step 2: create virtual env and install dependencies
-      - run:
-          name: obtain repo from GitHub
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
+      #- run:
+      #    name: obtain repo from GitHub
+      #    command: |
+      #      python3 -m venv venv
+      #      . venv/bin/activate
+      #      pip install -r requirements.txt
       # Step 3: run linter and tests
       - run:
           name: install dependencies
@@ -38,10 +38,6 @@ jobs:
             then
               git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
-              git status
-              git checkout main
-              git status
-              git merge dev
               git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
               git push --set-upstream origin main
             else
