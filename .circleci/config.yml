@@ -39,6 +39,7 @@ jobs:
               git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
               git pull --no-commit origin main && git commit -m "Merge"
+              git checkout main
               git branch
               git push -u origin main
             else
