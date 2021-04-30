@@ -38,10 +38,8 @@ jobs:
             then 
               git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
-              git pull origin main
+              git pull --no-commit origin main && git commit -m "Merge"
               git branch
-              git merge dev
-              git commit
               git push -u origin main
             else
               echo "No es la rama dev por lo que no hay nada que subir a git"
