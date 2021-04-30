@@ -38,6 +38,7 @@ jobs:
             then
               git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
+              git status
               git checkout main
               git status
               git merge dev
