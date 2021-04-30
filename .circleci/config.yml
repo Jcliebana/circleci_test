@@ -36,11 +36,10 @@ jobs:
           command: |
             if [[ "${CIRCLE_BRANCH}" = "dev" ]]
             then
-              git branch
-              echo ${CIRCLE_BRANCH}
               git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
               git checkout main
+              git status
               git merge dev
               git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
               git push --set-upstream origin main
