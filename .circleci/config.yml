@@ -38,7 +38,8 @@ jobs:
             then
               git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
-              git commit --allow-empty -am "Automatic commit from CircleCI [skip ci]"
+              git add --all .
+              git commit -m "test"
               git push --set-upstream origin main
             else
               echo "No es la rama dev por lo que no hay nada que subir a git"
