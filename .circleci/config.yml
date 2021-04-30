@@ -38,7 +38,6 @@ jobs:
             then 
               git config --global user.email "juancarlos.liebana@apara.es"
               git config --global user.name "CircleCI Job"
-              git checkout -f main
               git pull origin main
               git merge dev
               git commit --allow-empty -m "Automatic commit from CircleCI [skip ci]"
