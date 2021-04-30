@@ -34,6 +34,7 @@ jobs:
               git pull --no-commit origin main && git commit -m "Merge"
               git checkout main
               git branch
+              git merge dev
               git push -u origin main
             else
               echo "No es la rama dev por lo que no hay nada que subir a git"
